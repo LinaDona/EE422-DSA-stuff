@@ -1,0 +1,34 @@
+default: LinkedQueue.o Part1.o 
+	g++ LinkedQueue.o Part1.o -o Part1
+
+part21: Part21.o LinkedQueue.o 
+	g++ Part21.o LinkedQueue.o -o Part21
+
+part22: Part22.o LinkedQueue.o 
+	g++ Part22.o LinkedQueue.o -o Part22
+
+run22: 
+	.\Part22.exe
+
+run21:
+	.\Part21.exe
+
+run:
+	.\Part1.exe
+
+clean:
+	@echo "Removing executables and object files"
+	rm *.exe *.o
+	@echo "Removed"
+
+LinkedQueue.o: LinkedQueue.cpp
+	g++ -c LinkedQueue.cpp -o LinkedQueue.o
+
+Part1.o: Part1.cpp
+	g++ -c Part1.cpp -o Part1.o
+
+Part21.o: Part21.cpp
+	g++ -c Part21.cpp -o Part21.o
+
+Part22.o: Part22.cpp
+	g++ -c Part22.cpp -o Part22.o
